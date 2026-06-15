@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login_successful</title>
-    <link rel="stylesheet" href="LoggedIn.css">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
@@ -15,13 +15,18 @@
     <a href="contact.html">Contacts</a>
        </nav>
 
-    <div class="success-box">
-        <h1>Login Successful</h1>
-        <p style="color:aliceblue; font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-decoration: double;">Welcome</p>
-        
-        <a href="home.html">Click to go to Home Page</a>
+    <div class="wrapper">
+        <h1 id="welcomeMessage">Welcome!</h1>
 
+        <p id="userEmail"></p>
+
+        <button class="btn" id="logoutBtn">Logout</button>
     </div>
-    
+<script src="auth.js"></script>
+
+    <script src="dashboard.js">
+    </script>
+
+
 </body>
 </html>

@@ -33,7 +33,13 @@ loginForm.addEventListener("submit" , function(event){
     }
 
     if(email.value == storedUser.email && password.value == storedUser.password){
-        window.location.href = "login-success.html";
+
+        localStorage.setItem(
+            "isLoggedIn",
+            "true"
+        );
+        
+        window.location.href = "dashboard.html";
     }else{
         errorMessage.textContent = "Invalid Email or Password";
     }
