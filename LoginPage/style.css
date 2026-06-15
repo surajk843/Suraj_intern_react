@@ -15,6 +15,35 @@ body{
     overflow: hidden;
 
 }
+.navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    padding : 10px; 
+    /* fi not then change padding */
+    width: 100%;
+    display: flex;
+    gap: 18px;
+    background-color: black;
+    /* background: transparent; */
+}
+
+.navbar a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFD166;
+}
+
 .wrapper{
     width: min(90%,420px);
     max-height: 90vh;
@@ -26,16 +55,37 @@ body{
     border-radius: 10px;
     padding: 20px 30px;
 }
+.wrapper_1{
+    width: min(90%,420px);
+    max-height: 90vh;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);    
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 10px;
+}
 .wrapper h1{
     font-size: 36px;
     text-align: center;
 }
-
+.wrapper_1 h1{
+    font-size: 36px;
+    text-align: center;
+}
 .wrapper .input-box{
     position: relative;
     width: 100%;
     height: 50px;
     margin: 20px 0;
+}
+.wrapper_1 .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
 }
 .input-box input{
     width: 100%;
@@ -49,6 +99,7 @@ body{
     color: #fff;
     padding : 20px 45px 20px 20px
 }
+
 .input-box input::placeholder{
     color: #fff;
 }
@@ -67,7 +118,7 @@ body{
 }
 .remember-forgot label input{
     accent-color: #fff;
-    margin-right: 3px
+    margin-right: 3px;
 }
 .remember-forgot a{
     color: #fff;
@@ -78,24 +129,73 @@ body{
     text-decoration: underline;
 }
 
-.wrapper .btn{
+.wrapper .btn {
     width: 100%;
-    height: 45px;
-    background: #fff;
+    height: 55px;
+
+    background: linear-gradient(
+        135deg,
+        #F4A261,
+        #E76F51
+    );
+
     border: none;
-    outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
+
+    color: white;
+    font-size: 22px;
     font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.wrapper_1 .btn {
+    width: 100%;
+    height: 55px;
+
+    background: linear-gradient(
+        135deg,
+        #F4A261,
+        #E76F51
+    );
+
+    border: none;
+    border-radius: 40px;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.wrapper .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 162, 97, 0.4);
+}
+.wrapper_1 .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 162, 97, 0.4);
 }
 
 .wrapper .register_link{
     font-size: 15px;
     text-align: center;
     margin: 20px 0 15px;  
+}
+.wrapper_1 .register_link{
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 7.5px;  
 }
 .register_link p a {
     color: #fff;
@@ -110,4 +210,31 @@ body{
         width: 100%;
         height: 100vh;
     }
+}
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;   
+        justify-content: center;
+        gap: 10px;
+       
+    }
+
+    .navbar a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+#errorMessage {
+    color: #ff6b6b;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+#successMessage{
+    color:#4CAF50;
+    text-align:center;
+    margin:10px 0;
+    font-size:14px;
+    font-weight:600;
 }

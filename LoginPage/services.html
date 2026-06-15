@@ -4,10 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url("img.jpeg") no-repeat center center/cover;
+            color: #FFF8F0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 10px 10px 50px ;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            max-height: 700px;
+            margin: auto;
+        }
+
+        .services-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+
+            padding: 25px;
+        }
+
+        .services-card h2 {
+            color: #FFD166;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .service {
+            margin-bottom: 25px;
+            padding: 20px;
+
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+
+            transition: 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(244, 162, 97, 0.4);
+        }
+
+        .service h3 {
+            color: #FFD166;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #FFF8F0;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 360px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .services-card {
+                padding: 25px;
+            }
+
+            .service {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div>
-    <p>This a services page</p>
+     <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contacts</a>
+</nav>
+
+    <nav class="navbar_1">
+        <a href="index.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <div class="container">
+        <div class="services-card">
+
+            <h2>What We Offer</h2>
+
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>
+                    We create responsive and modern websites designed to
+                    provide an excellent user experience across all devices.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>UI/UX Design</h3>
+                <p>
+                    Our design solutions focus on creating attractive,
+                    intuitive, and user-friendly interfaces.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Digital Marketing</h3>
+                <p>
+                    We help businesses grow their online presence through
+                    effective marketing strategies and campaigns.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Technical Support</h3>
+                <p>
+                    Our support team is available to assist with maintenance,
+                    troubleshooting, and technical guidance.
+                </p>
+            </div>
+
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>

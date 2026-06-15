@@ -3,12 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url("img.jpeg") no-repeat center center/cover;
+            color: #FFF8F0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 10px 10px 50px ;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+
+            padding: 20px;
+        }
+
+        .contact-card h2 {
+            text-align: center;
+            color: #FFD166;
+            margin-bottom: 20px;
+        }
+
+        .contact-card p {
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+            font-size: 18px;
+            padding: 15px;
+
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+        }
+
+        .contact-item strong {
+            color: #FFD166;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        @media (max-width: 360px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-card {
+                padding: 25px;
+            }
+
+            .contact-item {
+                font-size: 16px;
+            }
+        }
+        
+    </style>
 </head>
 <body>
-    <div>
-        <p>This is Contact page</p>
+     <nav class="navbar">
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contacts</a>
+</nav>
+<nav class="navbar_1">
+        <a href="index.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="container">
+        <div class="contact-card">
+
+            <h2>Get In Touch</h2>
+
+            <p>
+                We'd love to hear from you. Feel free to reach out with
+                any questions, feedback, or project inquiries.
+            </p>
+
+            <div class="contact-item">
+                <strong>Phone:</strong> 9004875177
+            </div>
+
+            <div class="contact-item">
+                <strong>Email:</strong> surajkanojiya843@gmail.com
+            </div>
+
+            <div class="contact-item">
+                <strong>Address:</strong> Andheri, Mumbai, Maharashtra
+            </div>
+
+            <div class="contact-item">
+                <strong>Working Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM
+            </div>
+
+        </div>
     </div>
-    
+
+    <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
