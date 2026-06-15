@@ -1,15 +1,14 @@
-const { use } = require("react");
 
+const email = document.getElementById("email");
 const loginForm = document.getElementById("loginForm");
-const username = document.getElementById("username");
 const password = document.getElementById("password");
 const errorMessage = document.getElementById("errorMessage");
 
 loginForm.addEventListener("submit" , function(event){
     event.preventDefault();
 
-    if(username.value == ""){
-        errorMessage.textContent = "Username is required";
+    if(email.value == ""){
+        errorMessage.textContent = "EmailID is required";
         return;
     }
 
@@ -24,7 +23,19 @@ loginForm.addEventListener("submit" , function(event){
         "Password must be 8+ characters and contain uppercase, lowercase, number, and special character.";
         return;
     }
-
     errorMessage.textContent = "";
-    window.location.href = "login-success.html";
+
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if(!storedUser){
+        errorMessage.textContent = "No registered users found. Please register first.";
+        return;
+    }
+
+    if(email.value == storedUser.email && password.value == storedUser.password){
+        window.location.href = "login-success.html";
+    }else{
+        errorMessage.textContent = "Invalid Email or Password";
+    }
+
 });

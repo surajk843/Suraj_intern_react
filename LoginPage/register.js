@@ -58,6 +58,16 @@ registerForm.addEventListener("submit",function(){
     }
     errorMessage.textContent = "";
 
+    const user ={
+        firstName : firstName.value,
+        lastName : lastName.value,
+        mobile : mobile.value,
+        email : email.value,
+        password : password.value
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+
     successMessage.textContent =
     "Registration Successful! Redirecting to Login Page...";
 
